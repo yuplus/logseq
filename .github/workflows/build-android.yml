@@ -156,6 +156,7 @@ jobs:
       - name: Rename Apk
         run: |
           mkdir builds
+          find anroid/app/build/outputs
           mv anroid/app/build/outputs/apk/release/app-release-unsigned.apk ./builds/Logseq-android-${{ steps.ref.outputs.version }}.apk
 
       - name: Upload Artifact
