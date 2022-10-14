@@ -266,7 +266,6 @@ jobs:
         run: |
           mkdir builds
           mv static\out\make\squirrel.windows\x64\*.exe    builds\Logseq-win-x64-${{ steps.ref.outputs.version }}.exe
-          mv static\out\make\squirrel.windows\x64\*.nupkg  builds\Logseq-win-x64-${{ steps.ref.outputs.version }}-full.nupkg
           mv static\out\make\squirrel.windows\x64\RELEASES builds\RELEASES
 
       - name: Upload Artifact
@@ -376,10 +375,6 @@ jobs:
           pkgver=$(cat VERSION)
           echo ::set-output name=version::$pkgver
 
-      - name: Fix .nupkg name in RELEASES file
-        run: |
-          sed -i "s/Logseq-.*.nupkg/Logseq-win-x64-${{ steps.ref.outputs.version }}-full.nupkg/g" RELEASES
-
       - name: Generate SHA256 checksums
         run: |
           sha256sum *-win-* > SHA256SUMS.txt
@@ -403,7 +398,6 @@ jobs:
             ./SHA256SUMS.txt
             ./*.zip
             ./*.exe
-            ./*.nupkg
             ./RELEASES
             ./*.AppImage
             ./*.apk
