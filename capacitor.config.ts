@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
   appId: 'com.logseq.app',
-  appName: 'Logseq',
+  appName: 'LogseqDiary',
   bundledWebRuntime: false,
   webDir: 'public',
   plugins: {
