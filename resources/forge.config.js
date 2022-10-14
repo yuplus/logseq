@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   packagerConfig: {
-    name: 'Logseq',
+    name: 'Logseq1',
     icon: './icons/logseq_big_sur.icns',
     protocols: [
       {
@@ -28,7 +28,7 @@ module.exports = {
     {
       'name': '@electron-forge/maker-squirrel',
       'config': {
-        'name': 'Logseq',
+        'name': 'Logseqw',
         'setupIcon': './icons/logseq.ico',
         'loadingGif': './icons/installing.gif',
         'certificateFile': process.env.CODE_SIGN_CERTIFICATE_FILE,
@@ -41,7 +41,7 @@ module.exports = {
       config: {
         format: 'ULFO',
         icon: './icons/logseq_big_sur.icns',
-        name: 'Logseq'
+        name: 'Logseq3'
       }
     },
     {
